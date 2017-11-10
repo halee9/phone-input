@@ -1,0 +1,20 @@
+{
+  "name": "phone-input",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.0.17"
+  },
+  "dependencies": {
+    "input-format": "^0.1.15",
+    "libphonenumber-js": "^0.4.39",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
