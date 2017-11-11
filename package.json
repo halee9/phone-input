@@ -9,7 +9,8 @@
     "input-format": "^0.1.15",
     "libphonenumber-js": "^0.4.39",
     "react": "^16.1.0",
-    "react-dom": "^16.1.0"
+    "react-dom": "^16.1.0",
+    "react-responsive-ui": "^0.10.6"
   },
   "scripts": {
     "start": "react-scripts start",
