@@ -38,54 +38,32 @@ export default class InputPhoneNumber extends Component {
 
   render(){
     return (
-      <div>
-        <div className='container'>
-          <div className='select-container'>
-            <select
-              className='select'
-              value={this.state.ccode}
-              onChange={this.handleChangeCode}
-            >
-              { countryCodes.map(country => (
-                <option value={country.code}>{country.name}</option>
-              ))}
-            </select>
-            <div className='flag-container'>
-              <img
-                className='flag-image'
-                src={`${flagsPath}${this.state.ccode.toLowerCase()}.svg`}
-              />
-              <div className='select-arrow'></div>
-            </div>
-          </div>
-          <ReactInput
-            value={ this.state.value }
-            onChange={this.handleChangePhoneNumber}
-            format={ templateFormatter(this.state.template) }
-            parse={ templateParser(this.state.template, parseDigit) }
-            ref={input => this.phoneInput = input}
-          />
-        </div>
-        <div style={{ padding: '10px' }}>
-          <div>
-            Value: {this.state.value} 
-          </div>
-          <div>
-            Default country: {this.state.ccode} 
-          </div>
-          <div>
-            Actual country: {this.state.formatter.country} 
-          </div>
-          <div>
-            National: {this.state.formatter.national_number} 
-          </div>
-          <div>
-            National-format: {this.state.formatter.partially_populated_template} 
-          </div>
-          <div>
-            template: {this.state.formatter.template} 
+      <div className='container'>
+        <div className='select-container'>
+          <select
+            className='select'
+            value={this.state.ccode}
+            onChange={this.handleChangeCode}
+          >
+            { countryCodes.map(country => (
+              <option value={country.code}>{country.name}</option>
+            ))}
+          </select>
+          <div className='flag-container'>
+            <img
+              className='flag-image'
+              src={`${flagsPath}${this.state.ccode.toLowerCase()}.svg`}
+            />
+            <div className='select-arrow'></div>
           </div>
         </div>
+        <ReactInput
+          value={ this.state.value }
+          onChange={this.handleChangePhoneNumber}
+          format={ templateFormatter(this.state.template) }
+          parse={ templateParser(this.state.template, parseDigit) }
+          ref={input => this.phoneInput = input}
+        />
       </div>
     )
   }
